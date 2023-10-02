@@ -1,19 +1,18 @@
-/*
+
 import { useState, useContext } from "react";
 import { useRouter } from "next/router";
-import styles from "../styles/Home.module.css";
+
 import Head from "next/head";
-import searchCocktail from "./api/searchCocktail";
-import randomCocktail from "./api/randomCocktail";
-import Navigation from "../components/routes-nav/Navigation";
-import HomepageIntro from "../components/HomepageIntro";
-import SearchForm from "../components/SearchForm";
-import Alert from "../components/Alert";
-*/
 
-// Root page
+import styles from "../styles/index.module.css";
 
-import Link from 'next/link';
+// import searchCocktail from "./api/searchCocktail";
+// import randomCocktail from "./api/randomCocktail";
+import Navigation from "../components/Navbar";
+import HomepageIntro from "../components/HomePageIntro";
+// import SearchForm from "../components/SearchForm";
+// import Alert from "../components/Alert";
+
 
 function HomePage() {
     /*
