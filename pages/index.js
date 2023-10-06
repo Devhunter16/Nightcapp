@@ -10,7 +10,7 @@ import styles from "../styles/index.module.css";
 // import randomCocktail from "./api/randomCocktail";
 import Navigation from "../components/Navbar";
 import HomepageIntro from "../components/HomePageIntro";
-// import SearchForm from "../components/SearchForm";
+import SearchForm from "../components/SearchForm";
 // import Alert from "../components/Alert";
 
 
@@ -89,6 +89,3 @@ function HomePage() {
 };
 
 export default HomePage;
-
-
-
