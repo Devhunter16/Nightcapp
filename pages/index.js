@@ -2,13 +2,9 @@
 import { useState, useContext } from "react";
 import { useRouter } from "next/router";
 
-import Head from "next/head";
-
-import styles from "../styles/index.module.css";
-
 // import searchCocktail from "./api/searchCocktail";
 // import randomCocktail from "./api/randomCocktail";
-import Navigation from "../components/Navbar";
+import Layout from "../components/layout/Layout"
 import HomepageIntro from "../components/HomePageIntro";
 import SearchForm from "../components/SearchForm";
 // import Alert from "../components/Alert";
@@ -66,24 +62,10 @@ function HomePage() {
     */
     return (
         <>
-            <Head>
-                <title> Nightcapp </title>{" "}
-                <link href="Home.module.css" rel="stylesheet" />
-                <link
-                    href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"
-                    rel="stylesheet"
-                />
-                <link
-                    href="https://fonts.googleapis.com/css?family=Vibur:400"
-                    rel="stylesheet"
-                    type="text/css"
-                ></link>{" "}
-            </Head>{" "}
-            <main className={styles.container}>
-                <Navigation />
+            <Layout>
                 <HomepageIntro />
                 <SearchForm />{" "}
-            </main>{" "}
+            </Layout>
         </>
     );
 };
