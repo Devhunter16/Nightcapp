@@ -1,11 +1,10 @@
 import styles from "./styles/DrinksList.module.css";
 import RecipeCard from "./RecipeCard";
 
-export default function DrinksList(props) {
+function DrinksList(props) {
     return (
         <ul id={styles.ul}>
             <div id={styles.row}>
-                {" "}
                 {props.results.map((result) => (
                     <div onClick={() => props.handleShowDrinkRecipe(result)}>
                         <RecipeCard
@@ -14,10 +13,12 @@ export default function DrinksList(props) {
                             name={result.strDrink}
                             image={result.strDrinkThumb}
                             recipe={result.strInstructions}
-                        />{" "}
+                        />
                     </div>
-                ))}{" "}
-            </div>{" "}
+                ))}
+            </div>
         </ul>
     );
-}
+};
+
+export default DrinksList;
