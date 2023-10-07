@@ -1,4 +1,3 @@
-
 import { useState, useContext } from "react";
 import { useRouter } from "next/router";
 
@@ -63,7 +62,7 @@ function HomePage() {
     return (
         <>
             <Layout>
-                <HomepageIntro />
+                <HomepageIntro />{" "}
                 <SearchForm />{" "}
             </Layout>
         </>

@@ -2,10 +2,10 @@ import styles from "../../styles/About.module.css";
 
 import Image from "next/image";
 
-import mason from "../../public/mason-Photoroom.png";
+import mason from "../../public/mason.png";
 import devin from "../../public/devin.jpg";
 
-import Layout from "../components/layout/Layout"
+import Layout from "../../components/layout/Layout"
 
 
 function About() {
@@ -13,7 +13,6 @@ function About() {
         <Layout>
             <div className={styles.container}>
                 <h1 id={styles.h1}>About Nightcapp</h1>
-                <h2 id={styles.h2}>Cheers!</h2>
                 <section id={styles.about}>
                     <div className={styles.imageContainer}>
                         <div className={styles.masonContainer}>
