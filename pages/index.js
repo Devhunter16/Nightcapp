@@ -62,8 +62,8 @@ function HomePage() {
     return (
         <>
             <Layout>
-                <HomepageIntro />{" "}
-                <SearchForm />{" "}
+                <HomepageIntro />
+                <SearchForm />
             </Layout>
         </>
     );

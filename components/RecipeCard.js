@@ -1,4 +1,4 @@
-import styles from "./styles/RecipeCard.module.css";
+import styles from "./RecipeCard.module.css";
 
 function RecipeCard({ name, image, recipe }) {
     return (

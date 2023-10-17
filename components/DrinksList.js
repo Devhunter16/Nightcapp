@@ -1,4 +1,5 @@
-import styles from "./styles/DrinksList.module.css";
+import styles from "./DrinksList.module.css";
+
 import RecipeCard from "./RecipeCard";
 
 function DrinksList(props) {
