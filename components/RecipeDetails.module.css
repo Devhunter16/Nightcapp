@@ -43,30 +43,6 @@
     position: relative;
 }
 
-/* .icon:hover::before {
-    content: "Add to favorites";
-    display: block;
-    position: absolute;
-    top: -30px;
-    left: -10px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: red;
-    color: white;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  .icon:hover::after {
-    content: "";
-    display: block;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    border: 10px solid transparent;
-    border-bottom-color: #454444;
-  } */
-
 @media (max-width: 1500px) {
     #drinkTitle {
         font-size: 3vw;
