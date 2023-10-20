@@ -6,10 +6,10 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDice } from "@fortawesome/free-solid-svg-icons";
 
-// import searchCocktail from "./api/searchCocktail";
+import searchCocktail from "../pages/api/searchCocktail";
 import randomCocktail from "../pages/api/randomCocktail";
 
-function SearchForm(props) {
+function SearchForm() {
     const [searchTerm, setSearchTerm] = useState("");
     const router = useRouter();
 
@@ -23,24 +23,23 @@ function SearchForm(props) {
         if (searchTerm.trim() === "") {
             return;
         };
-        const data = await searchCocktail(searchTerm);
+        const results = await searchCocktail(searchTerm);
         setSearchTerm("");
-        if (data == undefined) {
-            // setAlert(true);
+        if (results == undefined) {
+            console.log("No data");
         } else {
+            console.log(results);
             // Pushing variables through to page and setting the route
             router.push({
                 pathname: `/drinks/${searchTerm}`,
                 query: {
-                    drinks: JSON.stringify(data),
+                    drinks: JSON.stringify(results),
                 },
             });
         };
     };
 
     const handleShowDrinkRecipe = (result) => {
-        console.log(result);
-
         // Pushing variables through to page and setting the route, must convert the JS
         // object to a JSON string in order to send the data
         router.push({

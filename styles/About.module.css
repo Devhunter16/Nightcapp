@@ -11,6 +11,7 @@
     flex-direction: row;
     margin-bottom: 2rem;
     margin-top: -3rem;
+    z-index: -100;
 }
 
 .masonContainer {
@@ -63,6 +64,26 @@
     }
 }
 
+@media (max-width: 740px) {
+    #h1 {
+        margin-left: 5rem;
+        margin-right: 4rem;
+    }
+}
+
+@media (max-width: 615px) {
+    #h1 {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    #h1 {
+        text-align: center;
+    }
+}
+
 @keyframes pulsate {
     100% {
         text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #f09,
@@ -83,7 +104,7 @@
     font-size: 4rem;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 715px) {
     .imageContainer {
         flex-direction: column;
     }

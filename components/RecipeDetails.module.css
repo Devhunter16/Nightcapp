@@ -7,9 +7,6 @@
     margin-top: 4rem;
     margin-bottom: 6rem;
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
 }
 
 @media (max-width: 1500px) {
@@ -73,6 +70,7 @@
     border: 5px solid rgba(198, 174, 212, 0.2);
     margin-top: 15px;
     margin-right: 25px;
+    box-shadow: 0 1px 8px 2px #8495ca;
     background: linear-gradient(to right, #e44ca4, #8495ca);
     background-size: 200% auto;
     animation: gradient 8s ease infinite;

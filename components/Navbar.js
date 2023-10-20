@@ -14,15 +14,6 @@ function Navigation() {
                         About Us
                     </Link>
                 </li>
-                <li className={styles.navItem}>
-                    <Link href="/">My Profile</Link>
-                </li>
-                <li className={styles.navItem}>
-                    <Link href="/">Favorites</Link>
-                </li>
-                <li className={styles.navItem}>
-                    <Link href="/">Log Out</Link>
-                </li>
             </ul>
         </div>
     );
