@@ -21,6 +21,7 @@ export default function DrinksPage() {
     useEffect(() => {
         if (drinks) {
             const parsedDrinks = JSON.parse(drinks);
+            console.log(parsedDrinks[0]);
             setParsedCocktails(parsedDrinks);
             setLoading(false); // Set loading to false after parsedDrinks is initialized
         };

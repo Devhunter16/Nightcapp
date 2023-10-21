@@ -52,31 +52,46 @@
     color: #ecefe2;
 }
 
-.recipeInstructions {
-    display: flex;
-    line-height: 20px;
-    padding: 14px;
-    font-size: 16px;
-    margin-top: 10px;
+.ingredientsTitle {
+    font-size: 18px;
+    text-align: center;
 }
 
-#instructionsBox {
-    flex-wrap: nowrap;
+.titleUnderline {
+    color: #8495ca;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.recipeIngredient {
+    display: flex;
+    padding-left: 15px;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+#measurement {
+    color: #D793BB;
+    padding-left: 5px;
+}
+
+#ingredientsBox {
+    flex-wrap: wrap;
     overflow-x: auto;
     height: 140px;
 }
 
-#instructionsBox::-webkit-scrollbar {
+#ingredientsBox::-webkit-scrollbar {
     width: 8px;
 }
 
-#instructionsBox::-webkit-scrollbar-track {
+#ingredientsBox::-webkit-scrollbar-track {
     margin-top: 10px;
     background-color: #1C1123;
     border-radius: 10px;
 }
 
-#instructionsBox::-webkit-scrollbar-thumb {
+#ingredientsBox::-webkit-scrollbar-thumb {
     background-color: #D793BB;
     border-radius: 10px;
 }

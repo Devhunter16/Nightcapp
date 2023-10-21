@@ -13,7 +13,7 @@ function DrinksList(props) {
                             id={result.idDrink}
                             name={result.strDrink}
                             image={result.strDrinkThumb}
-                            recipe={result.strInstructions}
+                            ingredients={result.ingredientsList}
                         />
                     </div>
                 ))}
