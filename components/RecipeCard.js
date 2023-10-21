@@ -1,5 +1,7 @@
 import styles from "./RecipeCard.module.css";
 
+import { BiDrink } from "react-icons/bi";
+
 function RecipeCard({ name, image, ingredients }) {
     return (
         <div className={styles.container}>
@@ -7,7 +9,10 @@ function RecipeCard({ name, image, ingredients }) {
                 <h3 className={styles.cocktailName}>{name}</h3>
                 <img src={image} className={styles.cardImage} />
                 <div id={styles.ingredientsBox}>
-                    <h2 className={styles.ingredientsTitle}> Ingredients </h2>
+                    <div className={styles.ingredientsTitle}>
+                        <BiDrink className={styles.icon} />
+                        <h2>Ingredients</h2>
+                    </div>
                     <hr className={styles.titleUnderline}></hr>
                     <ul>
                         {ingredients.map((ingredient) => (

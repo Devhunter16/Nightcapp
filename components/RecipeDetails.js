@@ -1,7 +1,5 @@
 import styles from "./RecipeDetails.module.css";
 
-import { BiDrink } from "react-icons/bi";
-
 export default function RecipeDetails(props) {
     return (
         <>
@@ -25,9 +23,6 @@ export default function RecipeDetails(props) {
                     </ul>
                     <h3 id={styles.directionsTitle}>Directions</h3>
                     <p id={styles.drinkDescription}>{props.instructions}</p>
-                    <div className={styles.iconContainer}>
-                        <BiDrink className={styles.icon} />
-                    </div>
                 </div>
             </div>
         </>
