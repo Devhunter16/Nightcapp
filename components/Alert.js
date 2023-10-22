@@ -1,4 +1,4 @@
-import styles from "./styles/Alert.module.css";
+import styles from "./Alert.module.css";
 
 export default function Alert(props) {
     return (

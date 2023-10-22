@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDice } from "@fortawesome/free-solid-svg-icons";
 
+import Alert from "./Alert";
 import searchCocktail from "../pages/api/searchCocktail";
 import randomCocktail from "../pages/api/randomCocktail";
 
@@ -22,6 +23,7 @@ function SearchForm() {
         event.preventDefault();
         // Prevents users from searching if the search field is empty
         if (searchTerm.trim() === "") {
+            setAlert(true);
             return;
         };
         const results = await searchCocktail(searchTerm);
@@ -57,30 +59,36 @@ function SearchForm() {
     };
 
     return (
-        <div id={styles.form}>
-            <form onSubmit={handleSubmit}>
-                <input
-                    id={styles.input}
-                    type="text"
-                    value={searchTerm}
-                    onChange={handleChange}
-                />
-                <button
-                    className={styles.btn}
-                    type="submit">
-                    Search
-                </button>
-                <button
-                    className={styles.btn}
-                    onClick={
-                        handleShowRandomCocktailRecipe
-                    }
-                >
-                    <FontAwesomeIcon id={styles.dice} icon={faDice} />
-                    Random
-                </button>
-            </form>
-        </div>
+        <>
+            <div id={styles.form}>
+                <form onSubmit={handleSubmit}>
+                    <input
+                        id={styles.input}
+                        type="text"
+                        value={searchTerm}
+                        onChange={handleChange}
+                    />
+                    <button
+                        className={styles.btn}
+                        type="submit">
+                        Search
+                    </button>
+                    <button
+                        className={styles.btn}
+                        onClick={
+                            handleShowRandomCocktailRecipe
+                        }
+                    >
+                        <FontAwesomeIcon id={styles.dice} icon={faDice} />
+                        Random
+                    </button>
+                </form>
+            </div>
+            {alert && <Alert
+                primaryMessage={"Whoops!"}
+                secondaryMessage={"Looks like you tried to submit a blank form, enter some text to search!"}
+            />}
+        </>
     );
 };
 
