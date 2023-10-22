@@ -11,6 +11,7 @@ import randomCocktail from "../pages/api/randomCocktail";
 
 function SearchForm() {
     const [searchTerm, setSearchTerm] = useState("");
+    const [alert, setAlert] = useState(false);
     const router = useRouter();
 
     const handleChange = (e) => {
