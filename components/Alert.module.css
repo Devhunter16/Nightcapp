@@ -9,7 +9,7 @@
     max-width: 33%;
     padding: .5rem 1.8rem 1.5rem 1.8rem;
     margin: 10vh auto;
-    animation: glow .4s ease-in;
+    animation: glow .3s ease-in;
     box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
         0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
 }
@@ -75,7 +75,7 @@
         box-shadow: none;
     }
 
-    50% {
+    25% {
         box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
             0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
         /* Return to initial position */
