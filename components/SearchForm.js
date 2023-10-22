@@ -42,6 +42,10 @@ function SearchForm() {
         };
     };
 
+    const handleCloseAlert = () => {
+        setAlert(false);
+    };
+
     const handleShowDrinkRecipe = (result) => {
         // Pushing variables through to page and setting the route, must convert the JS
         // object to a JSON string in order to send the data
@@ -87,6 +91,7 @@ function SearchForm() {
             {alert && <Alert
                 primaryMessage={"Whoops!"}
                 secondaryMessage={"Looks like you tried to submit a blank form, enter some text to search!"}
+                close={handleCloseAlert}
             />}
         </>
     );
