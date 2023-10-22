@@ -9,8 +9,9 @@
     max-width: 33%;
     padding: .5rem 1.8rem 1.5rem 1.8rem;
     margin: 10vh auto;
-    animation: jump .2s ease-in;
-    box-shadow: 0 0 16px 8px #D793BB;
+    animation: glow .4s ease-in;
+    box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+        0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
 }
 
 @media (max-width: 1024px) {
@@ -69,19 +70,14 @@
     border: 2px solid white;
 }
 
-@keyframes jump {
+@keyframes glow {
     0% {
-        transform: translatey(100px);
-        /* Initial position */
+        box-shadow: none;
     }
 
     50% {
-        transform: translatey(0px);
-        /* Jump up by 10 pixels */
-    }
-
-    100% {
-        transform: translatey(0);
+        box-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #f09,
+            0 0 82px #f09, 0 0 92px #f09, 0 0 102px #f09, 0 0 151px #f09;
         /* Return to initial position */
     }
 }
