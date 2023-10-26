@@ -6,12 +6,13 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDice } from "@fortawesome/free-solid-svg-icons";
 
-import Alert from "./Alert";
+import Alert from "./alertModal";
 import searchCocktail from "../pages/api/searchCocktail";
 import randomCocktail from "../pages/api/randomCocktail";
 
 function SearchForm() {
     const [searchTerm, setSearchTerm] = useState("");
+    const [isRandomSearch, setIsRandomSearch] = useState(false);
     const [alert, setAlert] = useState(false);
     const router = useRouter();
 
@@ -21,6 +22,7 @@ function SearchForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setAlert(false); // Reset the alert state
         // Prevents users from searching if the search field is empty
         if (searchTerm.trim() === "") {
             setAlert(true);
@@ -58,6 +60,7 @@ function SearchForm() {
     };
 
     const handleShowRandomCocktailRecipe = async () => {
+        setIsRandomSearch(true);
         const data = await randomCocktail();
         handleShowDrinkRecipe(data);
     };
@@ -90,7 +93,7 @@ function SearchForm() {
             </div>
             {alert && <Alert
                 primaryMessage={"Whoops!"}
-                secondaryMessage={"Looks like you tried to submit a blank form, enter some text to search!"}
+                secondaryMessage={"Looks like you left the search blank, enter some text to search!"}
                 close={handleCloseAlert}
             />}
         </>
