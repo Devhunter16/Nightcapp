@@ -12,7 +12,6 @@ import randomCocktail from "../pages/api/randomCocktail";
 
 function SearchForm() {
     const [searchTerm, setSearchTerm] = useState("");
-    const [isRandomSearch, setIsRandomSearch] = useState(false);
     const [alert, setAlert] = useState(false);
     const router = useRouter();
 
@@ -59,16 +58,24 @@ function SearchForm() {
         });
     };
 
-    const handleShowRandomCocktailRecipe = async () => {
-        setIsRandomSearch(true);
-        const data = await randomCocktail();
-        handleShowDrinkRecipe(data);
+    const handleShowRandomCocktailRecipe = async (event) => {
+        event.preventDefault(); // Allows us to handle the form submission manually
+        try {
+            const data = await randomCocktail();
+            if (data && data.idDrink) {
+                handleShowDrinkRecipe(data);
+            } else {
+                console.error("Invalid random cocktail data");
+            }
+        } catch (error) {
+            console.error("Error fetching random cocktail data", error);
+        };
     };
 
     return (
         <>
             <div id={styles.form}>
-                <form onSubmit={handleSubmit}>
+                <form>
                     <input
                         id={styles.input}
                         type="text"
@@ -77,7 +84,8 @@ function SearchForm() {
                     />
                     <button
                         className={styles.btn}
-                        type="submit">
+                        onClick={handleSubmit}
+                    >
                         Search
                     </button>
                     <button
