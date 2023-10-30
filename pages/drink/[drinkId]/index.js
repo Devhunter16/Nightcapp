@@ -9,8 +9,6 @@ import RecipeDetails from "../../../components/RecipeDetails";
 
 export default function DrinkPage() {
     const [parsedCocktail, setParsedCocktail] = useState(null);
-    // Loading state so that RecipeDetails does not try to render before parsedCocktail
-    // is initialized
     const [loading, setLoading] = useState(true);
     const router = useRouter();
 
@@ -18,18 +16,30 @@ export default function DrinkPage() {
         query: { drink }
     } = router;
 
-    // Set the parsedCocktail state when the component mounts
     useEffect(() => {
-        if (drink) {
-            const parsedCocktail = JSON.parse(drink);
-            const name = parsedCocktail.strDrink;
-            const image = parsedCocktail.strDrinkThumb;
-            const instructions = parsedCocktail.strInstructions;
-            const ingredientsList = matchIngredientsWithMeasurements(parsedCocktail);
+        const fetchData = async () => {
+            if (drink) {
+                const parsedCocktail = JSON.parse(drink);
+                const name = parsedCocktail.strDrink;
+                const image = parsedCocktail.strDrinkThumb;
+                const instructions = parsedCocktail.strInstructions;
+                const ingredientsList = matchIngredientsWithMeasurements(parsedCocktail);
 
-            setParsedCocktail({ name, image, instructions, ingredientsList });
-            setLoading(false); // Set loading to false after parsedCocktail is initialized
+                // Simulate image loading to ensure all data is available
+                const imagePromise = new Promise(resolve => {
+                    const img = new Image();
+                    img.onload = () => resolve(img);
+                    img.src = image;
+                });
+
+                await Promise.all([imagePromise]);
+
+                setParsedCocktail({ name, image, instructions, ingredientsList });
+                setLoading(false);
+            }
         };
+
+        fetchData();
     }, [drink]);
 
     return (
@@ -37,7 +47,7 @@ export default function DrinkPage() {
             <HomePageIntro />
             <SearchForm />
             {loading ? (
-                <p>Loading...</p> // Show a loading indicator while parsedCocktail is being initialized
+                <p>Loading...</p>
             ) : (
                 <RecipeDetails
                     name={parsedCocktail.name}
