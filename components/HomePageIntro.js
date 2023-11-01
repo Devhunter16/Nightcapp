@@ -1,4 +1,4 @@
-import styles from "./HomepageIntro.module.css";
+import styles from "./HomePageIntro.module.css";
 
 function HomepageIntro() {
     return (
