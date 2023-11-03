@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDice } from "@fortawesome/free-solid-svg-icons";
 
 import Alert from "./alertModal";
+import Footer from "./Footer";
 import searchCocktail from "../pages/api/searchCocktail";
 import randomCocktail from "../pages/api/randomCocktail";
 
@@ -104,6 +105,7 @@ function SearchForm() {
                 secondaryMessage={"Looks like you left the search blank, enter some text to search!"}
                 close={handleCloseAlert}
             />}
+            <Footer />
         </>
     );
 };
