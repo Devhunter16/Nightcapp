@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 
-import Layout from "../../../components/layout/Layout";
+import Layout from "../../../components/Layout";
 import HomePageIntro from "../../../components/HomePageIntro";
 import SearchForm from "../../../components/SearchForm";
 import DrinksList from "../../../components/DrinksList";

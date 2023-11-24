@@ -2,7 +2,7 @@ import styles from "./Layout.module.css";
 
 import Head from "next/head";
 
-import Navigation from "../Navbar";
+import Navigation from "./Navbar";
 
 function Layout(props) {
     return (

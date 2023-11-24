@@ -5,7 +5,7 @@ import Image from "next/image";
 import mason from "../../public/mason.png";
 import devin from "../../public/devin.jpg";
 
-import Layout from "../../components/layout/Layout"
+import Layout from "../../components/Layout"
 
 
 function About() {

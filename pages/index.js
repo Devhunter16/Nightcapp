@@ -1,4 +1,4 @@
-import Layout from "../components/layout/Layout"
+import Layout from "../components/Layout"
 import HomepageIntro from "../components/HomePageIntro";
 import SearchForm from "../components/SearchForm";
 
