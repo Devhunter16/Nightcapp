@@ -1,3 +1,7 @@
+#container {
+    margin-bottom: 8rem;
+}
+
 #h1 {
     margin-top: 2rem;
     margin-bottom: 3rem;
@@ -31,7 +35,7 @@
     font-family: 'League Spartan', sans-serif;
     justify-content: center;
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 1rem;
     font-size: 18px;
     line-height: 1.5;
     color: #c1b4cf;
