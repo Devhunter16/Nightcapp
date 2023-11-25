@@ -26,6 +26,10 @@
     position: relative;
 }
 
+.searchForm {
+    margin-top: 35px;
+}
+
 .active {
     color: #fff;
     font-family: "Vibur", sans-serif;

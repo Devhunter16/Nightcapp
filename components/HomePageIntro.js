@@ -5,7 +5,7 @@ function HomepageIntro() {
         <>
             <h1 id={styles.h1}>Nightcapp</h1>
             <p id={styles.p}>
-                <span id={styles.welcome}>Welcome to Nightcapp.</span>
+                <span id={styles.welcome}>Welcome in.</span>
                 <span>
                     Search for your favorite
                     cocktail or browse our collection.

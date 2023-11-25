@@ -3,6 +3,7 @@ import styles from "./Layout.module.css";
 import Head from "next/head";
 
 import Navigation from "./Navbar";
+import Footer from "./Footer";
 
 function Layout(props) {
     return (
@@ -20,10 +21,13 @@ function Layout(props) {
                     type="text/css"
                 ></link>
             </Head>
-            <Navigation />
-            <main className={styles.main}>
-                {props.children}
-            </main>
+            <div className={styles.container}>
+                <Navigation />
+                <main className={styles.main}>
+                    {props.children}
+                </main>
+                <Footer />
+            </div>
         </>
     );
 };

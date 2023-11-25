@@ -3,8 +3,6 @@ import { useRouter } from 'next/router';
 
 import { matchIngredientsWithMeasurements } from "../../api/searchCocktail";
 import Layout from "../../../components/Layout";
-import HomePageIntro from "../../../components/HomePageIntro";
-import SearchForm from "../../../components/SearchForm";
 import RecipeDetails from "../../../components/RecipeDetails";
 
 export default function DrinkPage() {
@@ -44,8 +42,6 @@ export default function DrinkPage() {
 
     return (
         <Layout>
-            <HomePageIntro />
-            <SearchForm />
             {loading ? (
                 <p>Loading...</p>
             ) : (

@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 
 import Layout from "../../../components/Layout";
-import HomePageIntro from "../../../components/HomePageIntro";
-import SearchForm from "../../../components/SearchForm";
 import DrinksList from "../../../components/DrinksList";
 
 export default function DrinksPage() {
@@ -39,8 +37,6 @@ export default function DrinksPage() {
 
     return (
         <Layout>
-            <HomePageIntro />
-            <SearchForm />
             {loading ? (
                 <p>Loading...</p> // Show a loading indicator while parsedCocktail is being initialized
             ) : (
