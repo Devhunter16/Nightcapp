@@ -45,10 +45,10 @@ function Navigation() {
                         <Link href="/about">About Us</Link>
                     </li>
                     <li className={`${styles.navItem} ${router.pathname === "/login" ? styles.active : ""}`}>
-                        <Link href="/">Login</Link>
+                        <Link href="/login">Login</Link>
                     </li>
                     <li className={`${styles.navItem} ${router.pathname === "/register" ? styles.active : ""}`}>
-                        <Link href="/about">Register</Link>
+                        <Link href="/register">Register</Link>
                     </li>
                 </ul>
             </div>
