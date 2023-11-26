@@ -1,5 +1,5 @@
-import Layout from "../../../components/Layout";
-import RegistrationForm from "../components/auth/RegistrationForm";
+import Layout from "../../components/Layout";
+import RegistrationForm from "../../components/RegistrationForm";
 
 
 export default function Register() {

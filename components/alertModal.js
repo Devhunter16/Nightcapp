@@ -1,6 +1,6 @@
 import styles from "./alertModal.module.css";
 
-export default function Alert(props) {
+function Alert(props) {
     return (
         <div id={styles.background} onClick={props.close}>
             <div id={styles.alertContainer}>
@@ -15,3 +15,5 @@ export default function Alert(props) {
         </div>
     );
 };
+
+export default Alert;
