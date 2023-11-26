@@ -6,11 +6,12 @@ import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDice } from "@fortawesome/free-solid-svg-icons";
 
+import { searchCocktailByName, searchCocktailByIngredient } from "../../pages/api/searchCocktail";
 import Alert from "../alert/AlertModal";
-import searchCocktail from "../../pages/api/searchCocktail";
 import randomCocktail from "../../pages/api/randomCocktail";
 
 function SearchForm() {
+    const [searchByName, setSearchByName] = useState(true);
     const [searchTerm, setSearchTerm] = useState("");
     const [alert, setAlert] = useState(false);
     const router = useRouter();
@@ -21,18 +22,24 @@ function SearchForm() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        let results = {};
         setAlert(false); // Reset the alert state
         // Prevents users from searching if the search field is empty
         if (searchTerm.trim() === "") {
             setAlert(true);
             return;
         };
-        const results = await searchCocktail(searchTerm);
+        if (searchByName == true) {
+            results = await searchCocktailByName(searchTerm);
+            console.log(results);
+        } else if (searchByName == false) {
+            results = await searchCocktailByIngredient(searchTerm);
+            console.log(results);
+        };
         setSearchTerm("");
         if (results == undefined) {
             console.log("No data");
         } else {
-            console.log(results);
             // Pushing variables through to page and setting the route
             router.push({
                 pathname: `/drinks/${searchTerm}`,
@@ -45,6 +52,11 @@ function SearchForm() {
 
     const handleCloseAlert = () => {
         setAlert(false);
+    };
+
+    // Toggles between searching by name or ingredient
+    const toggleSearchType = () => {
+        setSearchByName((prevSearchByName) => !prevSearchByName);
     };
 
     const handleShowDrinkRecipe = (result) => {
@@ -75,6 +87,14 @@ function SearchForm() {
     return (
         <>
             <div id={styles.form}>
+                <div className={styles.option}>
+                    Cocktail
+                    {searchByName ? (
+                        <span onClick={toggleSearchType}>Name:</span>
+                    ) : (
+                        <span onClick={toggleSearchType}>Ingredient:</span>
+                    )}
+                </div>
                 <form>
                     <input
                         id={styles.input}

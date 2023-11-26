@@ -10,13 +10,30 @@
     z-index: 100;
 }
 
+.option {
+    color: #d793bb;
+    font-size: 1.5rem;
+    padding: 0 10px 15px 0;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.option span {
+    margin-left: 6px;
+    font-weight: 700;
+    color: #b7b3f5;
+}
+
+.option span:hover {
+    cursor: pointer;
+}
+
 .btn {
     padding: 12px 24px;
     margin: 0 2px;
     border-radius: .75rem;
     box-sizing: border-box;
     text-decoration: none;
-    border: 1px solid #8f88e6;
+    border: 1px solid #a29dec;
     font-family: 'League Spartan', sans-serif;
     font-size: 15px;
     font-weight: 300;
