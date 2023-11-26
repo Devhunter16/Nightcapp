@@ -1,4 +1,4 @@
-import styles from "./alertModal.module.css";
+import styles from "./AlertModal.module.css";
 
 function Alert(props) {
     return (
