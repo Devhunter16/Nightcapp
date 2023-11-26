@@ -1,6 +1,6 @@
 import styles from "./HomePageIntro.module.css";
 
-import SearchForm from "./SearchForm";
+import SearchForm from "../searchForm/SearchForm";
 
 function HomepageIntro() {
     return (

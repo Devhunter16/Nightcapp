@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 
 import { matchIngredientsWithMeasurements } from "../../api/searchCocktail";
-import Layout from "../../../components/Layout";
+import Layout from "../../../components/layout/Layout";
 import RecipeDetails from "../../../components/RecipeDetails";
 
 export default function DrinkPage() {

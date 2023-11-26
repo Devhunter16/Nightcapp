@@ -2,8 +2,8 @@ import styles from "./Layout.module.css";
 
 import Head from "next/head";
 
-import Navigation from "./Navbar";
-import Footer from "./Footer";
+import Navigation from "../nav/Navbar";
+import Footer from "../footer/Footer";
 
 function Layout(props) {
     return (

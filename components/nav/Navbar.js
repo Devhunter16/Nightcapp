@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import Link from "next/link";
 
-import SearchForm from "./SearchForm";
+import SearchForm from "../searchForm/SearchForm";
 
 function Navigation() {
     // Only using useRouter to make so that if the user is on the home screen "Home"

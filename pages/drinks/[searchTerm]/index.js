@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useRouter } from 'next/router';
 
-import Layout from "../../../components/Layout";
-import DrinksList from "../../../components/DrinksList";
+import Layout from "../../../components/layout/Layout";
+import DrinksList from "../../../components/drinksList/DrinksList";
 
 export default function DrinksPage() {
     const [parsedCocktails, setParsedCocktails] = useState([]);
