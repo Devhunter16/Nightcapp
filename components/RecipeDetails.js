@@ -1,6 +1,6 @@
 import styles from "./RecipeDetails.module.css";
 
-export default function RecipeDetails(props) {
+function RecipeDetails(props) {
     return (
         <>
             <div id={styles.body}>
@@ -28,3 +28,5 @@ export default function RecipeDetails(props) {
         </>
     );
 };
+
+export default RecipeDetails;
