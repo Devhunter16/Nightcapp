@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import { matchIngredientsWithMeasurements } from "../../api/searchCocktail";
 import Layout from "../../../components/layout/Layout";
-import RecipeDetails from "../../../components/RecipeDetails";
+import RecipeDetails from "../../../components/recipeDetails/RecipeDetails";
 
 export default function DrinkPage() {
     const [parsedCocktail, setParsedCocktail] = useState(null);
